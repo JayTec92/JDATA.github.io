@@ -20,30 +20,52 @@
 
     /* Header */
     .mdl-layout__header {
-      background-color: #8FD0C2;
+      background-color: #000000; /* Schwarz */
     }
 
     .mdl-navigation__link {
       font-size: 1.1rem;
       font-weight: 600;
+      color: #ffffff; /* Weiß */
     }
 
     .mdl-navigation__link:hover {
-      background: rgba(0, 188, 212, 0.1);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Menü-Button (links) */
+    .mdl-layout__drawer-button::before {
+      content: "💾"; /* Disketten-Symbol */
+      font-size: 1.5rem;
+      color: #ffffff;
+    }
+
+    /* Versteckt das alte Icon */
+    .mdl-layout__drawer-button > i {
+      display: none;
+    }
+
+    /* Drawer entfernen (Seitenmenü wird nicht mehr gebraucht) */
+    .mdl-layout__drawer {
+      display: none;
     }
 
     /* Logo-Bereich */
     #home {
-      background-color: #ffffff; /* Weißer Hintergrund */
+      background-color: #ffffff;
       padding: 0;
       margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      height: calc(100vh - 64px); /* Bildschirmhöhe minus Header */
     }
 
     .logo {
       display: block;
-      width: 100%; /* Volle Breite */
+      width: 100%;
       height: auto;
-      margin: 0;
+      margin-top: 0; /* ganz oben */
     }
 
     /* Services-Bereich */
@@ -52,7 +74,7 @@
       padding: 4rem 2rem;
       margin-top: 0;
       border-radius: 0;
-      text-align: center; /* Überschrift bleibt zentriert */
+      text-align: center;
     }
 
     #services h2 {
@@ -68,8 +90,8 @@
       padding: 0;
       margin: 0 auto;
       max-width: 800px;
-      text-align: left;       /* Text linksbündig */
-      display: inline-block;  /* Block bleibt zentriert */
+      text-align: left;
+      display: inline-block;
     }
 
     #services li {
@@ -97,7 +119,7 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header mdl-layout__header--scroll">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">JDATA</span>
+        <!-- Kein "JDATA"-Titel mehr hier -->
         <div class="mdl-layout-spacer"></div>
         <nav class="mdl-navigation mdl-layout--large-screen-only">
           <a class="mdl-navigation__link" href="#home">Home</a>
@@ -107,14 +129,7 @@
       </div>
     </header>
 
-    <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title">JDATA</span>
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="#home">Home</a>
-        <a class="mdl-navigation__link" href="#services">Leistungen</a>
-        <a class="mdl-navigation__link" href="#contact">Kontakt</a>
-      </nav>
-    </div>
+    <!-- Drawer deaktiviert (nicht mehr sichtbar) -->
 
     <main class="mdl-layout__content">
       <!-- Startseite / Logo -->
@@ -129,7 +144,7 @@
           <li>🧾 Automatisierte Reportings nach GoBD-Vorgaben</li>
           <li>für die Dokumentation von ₿itcoinzahlungen</li>     
           <li>💻 Daten- & CSV Automatisierung</li>
-          <li>🔔 Benachrichtigungen/Alarme --> Smartphone, E-Mail</li>
+          <li>💬 Benachrichtigungen/Alarme → Smartphone, E-Mail</li>
           <li>📊 Logging, Dokumentation, Bereitstellung ansehnlich aufgearbeiteter Datensätze</li>
           <li>🔧 Auch kleine Einzelaufträge oder Testprojekte sind willkommen.</li> 
           <li>Schreiben Sie mir einfach eine Nachricht mit Ihrem Anwendungsfall</li>
