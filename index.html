@@ -14,50 +14,103 @@
       font-family: "Inter", "Roboto", sans-serif;
       background: #f8fafc;
       color: #1e1e1e;
+      line-height: 1.6;
     }
+
     main {
       text-align: center;
       padding: 6rem 2rem;
     }
 
-    /* >>> Dein Logo-Styling mit Vorrang <<< */
+    /* Logo */
     .logo {
-      width: 720px !important;   /* größer & Vorrang */
-      max-width: none !important;
-      height: auto !important;
-      margin-bottom: 1.5rem;
+      width: 680px;
+      max-width: 95%;
+      height: auto;
+      margin-bottom: 2rem;
     }
 
+    /* Überschriften & Text */
     h1 {
-      font-size: 2.5rem;
-      margin: 0.5rem 0;
-      color: ##8FD0C2; /* Deine Hauptfarbe */
+      font-size: 3rem;
+      font-weight: 700;
+      margin: 0.5rem 0 1rem;
+      color: #11827c;
     }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-top: 4rem;
+      color: #11827c;
+    }
+
     p {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #444;
+      margin: 1rem 0;
+    }
+
+    /* Header */
+    .mdl-layout__header {
+      background-color: #8FD0C2;
+    }
+
+    .mdl-navigation__link {
       font-size: 1.1rem;
-      color: #555;
+      font-weight: 600;
     }
 
     .mdl-navigation__link:hover {
       background: rgba(0, 188, 212, 0.1);
     }
-    .mdl-layout__header {
-      background-color: #8FD0C2;
+
+    /* Services Bereich */
+    #services {
+      background: #e7f5f3;
+      padding: 4rem 2rem;
+      margin-top: 3rem;
+      border-radius: 12px;
+    }
+
+    #services ul {
+      list-style: none;
+      padding: 0;
+      max-width: 700px;
+      margin: 2rem auto;
+    }
+
+    #services li {
+      font-size: 1.2rem;
+      font-weight: 500;
+      padding: 0.5rem 0;
+    }
+
+    /* Kontakt-Link */
+    .email {
+      color: #00796b;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .email:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 
 <body>
-  <!-- MDL Layout mit Header -->
+  <!-- MDL Layout -->
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header mdl-layout__header--scroll">
       <div class="mdl-layout__header-row">
         <span class="mdl-layout-title">JDATA</span>
         <div class="mdl-layout-spacer"></div>
         <nav class="mdl-navigation mdl-layout--large-screen-only">
-          <a class="mdl-navigation__link" href="#">Home</a>
-          <a class="mdl-navigation__link" href="#">Services</a>
-          <a class="mdl-navigation__link" href="#">Kontakt</a>
+          <a class="mdl-navigation__link" href="#home">Home</a>
+          <a class="mdl-navigation__link" href="#services">Services</a>
+          <a class="mdl-navigation__link" href="#contact">Kontakt</a>
         </nav>
       </div>
     </header>
@@ -65,23 +118,33 @@
     <div class="mdl-layout__drawer">
       <span class="mdl-layout-title">JDATA</span>
       <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="#">Home</a>
-        <a class="mdl-navigation__link" href="#">Services</a>
-        <a class="mdl-navigation__link" href="#">Kontakt</a>
+        <a class="mdl-navigation__link" href="#home">Home</a>
+        <a class="mdl-navigation__link" href="#services">Services</a>
+        <a class="mdl-navigation__link" href="#contact">Kontakt</a>
       </nav>
     </div>
 
     <main class="mdl-layout__content">
-      <div class="page-content">
-        <!-- Logo mit eigener Klasse -->
+      <div class="page-content" id="home">
         <img src="logo.png" alt="JDATA Logo" class="logo">
         <h1>JDATA – Digital Services</h1>
-        <p>🚧 Website in Vorbereitung – Coming Soon 🚧</p>
-        <p>kontakt@jdata.digital</p>
+        <p id="contact">
+          <a href="mailto:kontakt@jdata.digital" class="email">kontakt@jdata.digital</a>
+        </p>
       </div>
+
+      <!-- Neuer Bereich: Services -->
+      <section id="services">
+        <h2>Unsere Leistungen</h2>
+        <ul>
+          <li>💻 Webentwicklung & Hosting</li>
+          <li>📱 App- und Softwarelösungen</li>
+          <li>☁️ Cloud-Integration & Datenmanagement</li>
+          <li>🔒 IT-Security & Datenschutzlösungen</li>
+          <li>📊 Automatisierung & Prozessoptimierung</li>
+        </ul>
+      </section>
     </main>
   </div>
 </body>
 </html>
-
-
