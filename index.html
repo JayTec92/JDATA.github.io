@@ -62,14 +62,15 @@
       margin-bottom: 2rem;
     }
 
-    /* Liste: Block bleibt zentriert, Text linksbündig */
+    /* Liste: Block bleibt zentriert, Text linksbündig und leicht eingerückt */
     #services ul {
       list-style: none;
       padding: 0;
       margin: 0 auto;
       max-width: 800px;
-      text-align: left;       /* Text linksbündig */
-      display: inline-block;  /* Block bleibt zentriert */
+      text-align: left;
+      display: inline-block;
+      padding-left: 1.5rem; /* Einrückung */
     }
 
     #services li {
@@ -77,6 +78,7 @@
       font-weight: 500;
       padding: 0.5rem 0;
       line-height: 1.6;
+      text-indent: -0.5rem; /* sorgt für saubere Symbolausrichtung */
     }
 
     /* Kontakt-Link */
