@@ -15,41 +15,7 @@
       background: #f8fafc;
       color: #1e1e1e;
       line-height: 1.6;
-    }
-
-    main {
-      text-align: center;
-      padding: 6rem 2rem;
-    }
-
-    /* Logo */
-    .logo {
-      width: 680px;
-      max-width: 95%;
-      height: auto;
-      margin-bottom: 2rem;
-    }
-
-    /* Überschriften & Text */
-    h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      margin: 0.5rem 0 1rem;
-      color: #11827c;
-    }
-
-    h2 {
-      font-size: 2rem;
-      font-weight: 600;
-      margin-top: 4rem;
-      color: #11827c;
-    }
-
-    p {
-      font-size: 1.3rem;
-      font-weight: 500;
-      color: #444;
-      margin: 1rem 0;
+      margin: 0;
     }
 
     /* Header */
@@ -66,19 +32,41 @@
       background: rgba(0, 188, 212, 0.1);
     }
 
-    /* Services Bereich */
+    /* Logo-Bereich */
+    #home {
+      background-color: #ffffff; /* Weißer Hintergrund */
+      padding: 0;
+      margin: 0;
+    }
+
+    .logo {
+      display: block;
+      width: 100%; /* Volle Breite */
+      height: auto;
+      margin: 0;
+    }
+
+    /* Services-Bereich */
     #services {
       background: #e7f5f3;
       padding: 4rem 2rem;
-      margin-top: 3rem;
-      border-radius: 12px;
+      margin-top: 0;
+      border-radius: 0;
+      text-align: center;
+    }
+
+    #services h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #11827c;
+      margin-bottom: 2rem;
     }
 
     #services ul {
       list-style: none;
       padding: 0;
-      max-width: 700px;
-      margin: 2rem auto;
+      margin: 0 auto;
+      max-width: 800px;
     }
 
     #services li {
@@ -109,7 +97,7 @@
         <div class="mdl-layout-spacer"></div>
         <nav class="mdl-navigation mdl-layout--large-screen-only">
           <a class="mdl-navigation__link" href="#home">Home</a>
-          <a class="mdl-navigation__link" href="#services">Services</a>
+          <a class="mdl-navigation__link" href="#services">Leistungen</a>
           <a class="mdl-navigation__link" href="#contact">Kontakt</a>
         </nav>
       </div>
@@ -119,30 +107,35 @@
       <span class="mdl-layout-title">JDATA</span>
       <nav class="mdl-navigation">
         <a class="mdl-navigation__link" href="#home">Home</a>
-        <a class="mdl-navigation__link" href="#services">Services</a>
+        <a class="mdl-navigation__link" href="#services">Leistungen</a>
         <a class="mdl-navigation__link" href="#contact">Kontakt</a>
       </nav>
     </div>
 
     <main class="mdl-layout__content">
+      <!-- Startseite / Logo -->
       <div class="page-content" id="home">
         <img src="logo.png" alt="JDATA Logo" class="logo">
-        <h1>JDATA – Digital Services</h1>
-        <p id="contact">
-          <a href="mailto:kontakt@jdata.digital" class="email">kontakt@jdata.digital</a>
-        </p>
       </div>
 
-      <!-- Neuer Bereich: Services -->
+      <!-- Leistungen -->
       <section id="services">
-        <h2>Unsere Leistungen</h2>
+        <h2>Leistungen</h2>
         <ul>
-          <li>💻 Webentwicklung & Hosting</li>
-          <li>📱 App- und Softwarelösungen</li>
-          <li>☁️ Cloud-Integration & Datenmanagement</li>
-          <li>🔒 IT-Security & Datenschutzlösungen</li>
-          <li>📊 Automatisierung & Prozessoptimierung</li>
+          <li>🧾 Automatisierte Reportings nach GoBD-Vorgaben für die Dokumentation von ₿itcoinzahlungen</li>          
+          <li>💻 Daten- & CSV Automatisierung</i>
+          <li>💬 Benachrichtigungen/Alarme --> Smartphone, E-Mail</li>
+          <li>📊 Logging, Dokumentation, bereitstellung ansehnlich aufgearbeiteter Datensätze</li>
+          <li>🔧Auch kleine Einzelaufträge oder Testprojekte sind willkommen.</li> 
+          <li>Schreiben Sie mir einfach eine Nachricht mit Ihrem Anwendungsfall</li>
         </ul>
+      </section>
+
+      <!-- Kontakt -->
+      <section id="contact" style="text-align:center; padding:3rem;">
+        <p>
+          <a href="mailto:kontakt@jdata.digital" class="email">kontakt@jdata.digital</a>
+        </p>
       </section>
     </main>
   </div>
