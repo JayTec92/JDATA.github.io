@@ -32,16 +32,37 @@
       background: rgba(0, 188, 212, 0.1);
     }
 
+    /* Menü-Button (links) */
+    .mdl-layout__drawer-button::before {
+      content: "💾"; /* Disketten-Symbol */
+      font-size: 1.5rem;
+      color: #1e1e1e;
+    }
+
+    /* altes Icon ausblenden */
+    .mdl-layout__drawer-button > i {
+      display: none;
+    }
+
+    /* Drawer-Titel entfernen */
+    .mdl-layout__drawer .mdl-layout-title {
+      display: none;
+    }
+
     /* Logo-Bereich */
     #home {
       background-color: #ffffff; /* Weißer Hintergrund */
       padding: 0;
       margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: calc(100vh - 64px);
     }
 
     .logo {
       display: block;
-      width: 100%; /* Volle Breite */
+      width: 100%;
       height: auto;
       margin: 0;
     }
@@ -52,7 +73,7 @@
       padding: 4rem 2rem;
       margin-top: 0;
       border-radius: 0;
-      text-align: center; /* Überschrift bleibt zentriert */
+      text-align: center;
     }
 
     #services h2 {
@@ -70,7 +91,7 @@
       max-width: 800px;
       text-align: left;
       display: inline-block;
-      padding-left: 1.5rem; /* Einrückung */
+      padding-left: 1.5rem;
     }
 
     #services li {
@@ -78,7 +99,7 @@
       font-weight: 500;
       padding: 0.5rem 0;
       line-height: 1.6;
-      text-indent: -0.5rem; /* sorgt für saubere Symbolausrichtung */
+      text-indent: -0.5rem;
     }
 
     /* Kontakt-Link */
@@ -99,7 +120,7 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header mdl-layout__header--scroll">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">JDATA</span>
+        <!-- Titel entfernt -->
         <div class="mdl-layout-spacer"></div>
         <nav class="mdl-navigation mdl-layout--large-screen-only">
           <a class="mdl-navigation__link" href="#home">Home</a>
@@ -110,7 +131,7 @@
     </header>
 
     <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title">JDATA</span>
+      <!-- Drawer ohne Titel -->
       <nav class="mdl-navigation">
         <a class="mdl-navigation__link" href="#home">Home</a>
         <a class="mdl-navigation__link" href="#services">Leistungen</a>
@@ -148,3 +169,4 @@
   </div>
 </body>
 </html>
+
