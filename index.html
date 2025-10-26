@@ -52,7 +52,7 @@
       padding: 4rem 2rem;
       margin-top: 0;
       border-radius: 0;
-      text-align: center;
+      text-align: center; /* Überschrift bleibt zentriert */
     }
 
     #services h2 {
@@ -62,17 +62,21 @@
       margin-bottom: 2rem;
     }
 
+    /* Liste: Block bleibt zentriert, Text linksbündig */
     #services ul {
       list-style: none;
       padding: 0;
       margin: 0 auto;
       max-width: 800px;
+      text-align: left;       /* Text linksbündig */
+      display: inline-block;  /* Block bleibt zentriert */
     }
 
     #services li {
       font-size: 1.2rem;
       font-weight: 500;
       padding: 0.5rem 0;
+      line-height: 1.6;
     }
 
     /* Kontakt-Link */
@@ -124,14 +128,10 @@
         <ul>
           <li>🧾 Automatisierte Reportings nach GoBD-Vorgaben</li>
           <li>für die Dokumentation von ₿itcoinzahlungen</li>     
-          <li></i>
-          <li>💻 Daten- & CSV Automatisierung</i>
-          <li></i>
-          <li>💬 Benachrichtigungen/Alarme --> Smartphone, E-Mail</li>
-          <li></i>
+          <li>💻 Daten- & CSV Automatisierung</li>
+          <li>🔔 Benachrichtigungen/Alarme --> Smartphone, E-Mail</li>
           <li>📊 Logging, Dokumentation, Bereitstellung ansehnlich aufgearbeiteter Datensätze</li>
-          <li></i>
-          <li>🔧Auch kleine Einzelaufträge oder Testprojekte sind willkommen.</li> 
+          <li>🔧 Auch kleine Einzelaufträge oder Testprojekte sind willkommen.</li> 
           <li>Schreiben Sie mir einfach eine Nachricht mit Ihrem Anwendungsfall</li>
         </ul>
       </section>
@@ -146,5 +146,3 @@
   </div>
 </body>
 </html>
-
-
