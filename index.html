@@ -32,26 +32,24 @@
       background: rgba(0, 188, 212, 0.1);
     }
 
-    /* Menü-Button (links) */
+    /* Menü-Button links (Diskette) */
     .mdl-layout__drawer-button::before {
-      content: "💾"; /* Disketten-Symbol */
+      content: "💾";
       font-size: 1.5rem;
       color: #1e1e1e;
     }
 
-    /* altes Icon ausblenden */
     .mdl-layout__drawer-button > i {
       display: none;
     }
 
-    /* Drawer-Titel entfernen */
     .mdl-layout__drawer .mdl-layout-title {
       display: none;
     }
 
     /* Logo-Bereich */
     #home {
-      background-color: #ffffff; /* Weißer Hintergrund */
+      background-color: #ffffff;
       padding: 0;
       margin: 0;
       display: flex;
@@ -83,7 +81,6 @@
       margin-bottom: 2rem;
     }
 
-    /* Liste: Block bleibt zentriert, Text linksbündig und leicht eingerückt */
     #services ul {
       list-style: none;
       padding: 0;
@@ -112,6 +109,24 @@
     .email:hover {
       text-decoration: underline;
     }
+
+    /* Impressum & Datenschutz */
+    #impressum, #datenschutz {
+      background: #f3f6f7;
+      padding: 3rem;
+      text-align: left;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    #impressum h2, #datenschutz h2 {
+      color: #11827c;
+      text-align: center;
+    }
+
+    #impressum p, #datenschutz p, #datenschutz ul {
+      font-size: 1rem;
+    }
   </style>
 </head>
 
@@ -120,26 +135,30 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header mdl-layout__header--scroll">
       <div class="mdl-layout__header-row">
-        <!-- Titel entfernt -->
+        <!-- kein sichtbarer Titel -->
         <div class="mdl-layout-spacer"></div>
         <nav class="mdl-navigation mdl-layout--large-screen-only">
           <a class="mdl-navigation__link" href="#home">Home</a>
           <a class="mdl-navigation__link" href="#services">Leistungen</a>
           <a class="mdl-navigation__link" href="#contact">Kontakt</a>
+          <a class="mdl-navigation__link" href="#impressum">Impressum</a>
+          <a class="mdl-navigation__link" href="#datenschutz">Datenschutz</a>
         </nav>
       </div>
     </header>
 
     <div class="mdl-layout__drawer">
-      <!-- Drawer ohne Titel -->
       <nav class="mdl-navigation">
         <a class="mdl-navigation__link" href="#home">Home</a>
         <a class="mdl-navigation__link" href="#services">Leistungen</a>
         <a class="mdl-navigation__link" href="#contact">Kontakt</a>
+        <a class="mdl-navigation__link" href="#impressum">Impressum</a>
+        <a class="mdl-navigation__link" href="#datenschutz">Datenschutz</a>
       </nav>
     </div>
 
     <main class="mdl-layout__content">
+
       <!-- Startseite / Logo -->
       <div class="page-content" id="home">
         <img src="logo.png" alt="JDATA Logo" class="logo">
@@ -149,12 +168,13 @@
       <section id="services">
         <h2>Leistungen</h2>
         <ul>
-          <li>🧾 Automatisierte Reportings nach GoBD-Vorgaben für die Dokumentation von ₿itcoinzahlungen</li>     
+          <li>🧾 Automatisierte Reportings nach GoBD-Vorgaben</li>
+          <li>für die Dokumentation von ₿itcoinzahlungen</li>     
           <li>💻 Daten- & CSV Automatisierung</li>
-          <li>💬 Benachrichtigungen/Alarme --> Smartphone, E-Mail</li>
+          <li>💬 Benachrichtigungen/Alarme → Smartphone, E-Mail</li>
           <li>📊 Logging, Dokumentation, Bereitstellung ansehnlich aufgearbeiteter Datensätze</li>
           <li>🔧 Auch kleine Einzelaufträge oder Testprojekte sind willkommen.</li> 
-          <li>💬Schreiben mir einfach eine Nachricht mit deinem Anwendungsfall</li>
+          <li>Schreiben Sie mir einfach eine Nachricht mit Ihrem Anwendungsfall</li>
         </ul>
       </section>
 
@@ -164,52 +184,108 @@
           <a href="mailto:kontakt@jdata.digital" class="email">kontakt@jdata.digital</a>
         </p>
       </section>
-      
+
       <!-- Impressum -->
-<section id="impressum" style="background:#f3f6f7; padding:3rem; text-align:left; max-width:800px; margin:0 auto;">
-  <h2 style="color:#11827c; text-align:center;">Impressum</h2>
-  <p><strong>Angaben gemäß § 5 TMG:</strong></p>
-  <p>
-    JDATA – Digital Services<br>
-    JayTec92 (Vor- und Nachname bitte hier ergänzen)<br>
-    Musterstraße 12<br>
-    12345 Musterstadt<br>
-    Deutschland
-  </p>
+      <section id="impressum">
+        <h2>Impressum</h2>
+        <p><strong>Angaben gemäß § 5 TMG:</strong></p>
+        <p>
+          JDATA – Digital Services<br>
+          Jakob Winzen<br>
+          Obere Mühlenstraße 10<br>
+          79426 Buggingen<br>
+          Deutschland
+        </p>
 
-  <p><strong>Kontakt:</strong><br>
-    E-Mail: <a href="mailto:kontakt@jdata.digital" style="color:#00796b;">kontakt@jdata.digital</a><br>
-    Website: <a href="https://jdata.digital" style="color:#00796b;">https://jdata.digital</a>
-  </p>
+        <p><strong>Kontakt:</strong><br>
+          E-Mail: <a href="mailto:kontakt@jdata.digital" class="email">kontakt@jdata.digital</a><br>
+          Website: <a href="https://jdata.digital" class="email">https://jdata.digital</a>
+        </p>
 
-  <p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong><br>
-    JayTec92 (vollständiger Name hier)<br>
-    Anschrift wie oben
-  </p>
+        <p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong><br>
+          JayTec92 (vollständiger Name hier)<br>
+          Anschrift wie oben
+        </p>
 
-  <p><strong>Haftung für Inhalte:</strong><br>
-    Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit
-    und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
-  </p>
+        <p><strong>Haftung für Inhalte:</strong><br>
+          Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit
+          und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
+        </p>
 
-  <p><strong>Haftung für Links:</strong><br>
-    Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben.
-    Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der
-    verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
-  </p>
+        <p><strong>Haftung für Links:</strong><br>
+          Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben.
+          Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.
+        </p>
 
-  <p><strong>Urheberrecht:</strong><br>
-    Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen
-    Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der
-    Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
-  </p>
-</section>
+        <p><strong>Urheberrecht:</strong><br>
+          Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen
+          Urheberrecht. Eine Vervielfältigung, Bearbeitung oder Verwertung außerhalb der Grenzen des Urheberrechts
+          bedarf der schriftlichen Zustimmung des jeweiligen Autors.
+        </p>
+      </section>
+
+      <!-- Datenschutz -->
+      <section id="datenschutz">
+        <h2>Datenschutzerklärung</h2>
+
+        <p><strong>1. Datenschutz auf einen Blick</strong></p>
+        <p>Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir behandeln Ihre Daten vertraulich
+          und gemäß den gesetzlichen Vorschriften sowie dieser Datenschutzerklärung.</p>
+
+        <p><strong>2. Verantwortliche Stelle</strong></p>
+        <p>
+          JDATA – Digital Services<br>
+          Jakob Winzen<br>
+          Obere Mühlenstraße 10<br>
+          79426 Buggingen<br>
+          E-Mail: <a href="mailto:kontakt@jdata.digital" class="email">kontakt@jdata.digital</a>
+        </p>
+
+        <p><strong>3. Erhebung und Speicherung personenbezogener Daten</strong></p>
+        <p>
+          Die Nutzung unserer Website ist in der Regel ohne Angabe personenbezogener Daten möglich.
+          Soweit auf unseren Seiten personenbezogene Daten erhoben werden, erfolgt dies stets auf freiwilliger Basis.
+        </p>
+
+        <p><strong>4. Server-Log-Dateien</strong></p>
+        <p>
+          Der Provider der Seiten erhebt und speichert automatisch Informationen in sogenannten Server-Log-Dateien,
+          die Ihr Browser automatisch übermittelt:
+        </p>
+        <ul>
+          <li>Browsertyp und Browserversion</li>
+          <li>Verwendetes Betriebssystem</li>
+          <li>Referrer URL</li>
+          <li>Hostname des zugreifenden Rechners</li>
+          <li>Uhrzeit der Serveranfrage</li>
+          <li>IP-Adresse</li>
+        </ul>
+
+        <p><strong>5. Kontakt per E-Mail</strong></p>
+        <p>
+          Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben zwecks Bearbeitung gespeichert.
+          Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+        </p>
+
+        <p><strong>6. Ihre Rechte</strong></p>
+        <p>
+          Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung,
+          Datenübertragbarkeit und Widerspruch.
+        </p>
+
+        <p><strong>7. SSL- bzw. TLS-Verschlüsselung</strong></p>
+        <p>
+          Diese Seite nutzt zum Schutz vertraulicher Inhalte eine SSL- bzw. TLS-Verschlüsselung.
+          Eine verschlüsselte Verbindung erkennen Sie an „https://“ in der Adresszeile.
+        </p>
+
+        <p><strong>8. Widerspruch gegen Werbe-Mails</strong></p>
+        <p>
+          Der Nutzung von im Impressum veröffentlichten Kontaktdaten zur Übersendung von Werbung wird hiermit widersprochen.
+        </p>
+      </section>
 
     </main>
   </div>
 </body>
 </html>
-
-
-
-
